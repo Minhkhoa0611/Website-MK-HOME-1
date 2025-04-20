@@ -120,9 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
           <h3>Kết nối với chúng tôi</h3>
           <div class="social-icons">
             <a href="https://www.facebook.com/xaydungkhanhhoa7979/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/mk.minhkhoa06/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@thietkemkhome79" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@thietkexaydung79" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://t.me/mkhome79" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
           </div>
         </div>
         <div class="footer-section">

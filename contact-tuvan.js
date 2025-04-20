@@ -260,10 +260,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <section class="contact-info">
                 <div class="container">
                     <h3>Hoặc gọi ngay cho chúng tôi</h3>
-                    <p>VP Nha Trang: 0867544809</p>
-                    <p>CN Ninh Hòa: 0825864379</p>
-                    <p>Đội ngũ nhân sự giải đáp - tư vấn chuyên nghiệp đã sẵn sàng hỗ trợ quý khách mọi lúc mọi nơi. Gọi ngay hotline XD MINH KHOA để được tư vấn tận tình và chi tiết nhất!</p>
-                    <p><a href="https://maps.app.goo.gl/v7ZCYzXvkSNTwEqDA" target="_blank">Tìm chúng tôi trên Google Maps</a></p>
+                    <p><i class="fas fa-phone-alt"></i> MK HOME:</p>
+                    <p>- <a href="tel:0867544809"><i class="fas fa-phone"></i> SDT 1: 0867544809</a></p>
+                    <p>- <a href="tel:0825864379"><i class="fas fa-phone"></i> SDT 2: 0825864379</a></p>
+                    <p>Đội ngũ nhân sự giải đáp - tư vấn chuyên nghiệp đã sẵn sàng hỗ trợ quý khách mọi lúc mọi nơi. Gọi ngay hotline MK HOME để được tư vấn tận tình và chi tiết nhất!</p>
+                    <p><a href="https://maps.app.goo.gl/v7ZCYzXvkSNTwEqDA" target="_blank"><i class="fas fa-map-marker-alt"></i> Tìm chúng tôi trên Google Maps</a></p>
                 </div>
             </section>
         `;

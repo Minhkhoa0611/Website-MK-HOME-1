@@ -143,6 +143,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     container.appendChild(chatboxButton);
 
+    // Tạo nút liên hệ qua Telegram
+    const telegramButton = document.createElement("a");
+    telegramButton.href = "https://t.me/mkhome79";
+    telegramButton.target = "_blank";
+    telegramButton.title = "Liên hệ qua Telegram";
+    telegramButton.style.cssText = buttonStyle;
+    telegramButton.innerHTML = `<img src="telegram.png" alt="Telegram" style="${iconStyle}">`;
+    telegramButton.addEventListener("mouseover", () => telegramButton.style.transform = "scale(1.1)");
+    telegramButton.addEventListener("mouseout", () => telegramButton.style.transform = "scale(1)");
+    container.appendChild(telegramButton);
+
     document.body.appendChild(container);
 
     // Add blinking animation to buttons
@@ -159,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(styleSheet);
 
     // Apply blinking animation to all buttons
-    const buttons = [hotline, zaloButton, facebookButton, chatboxButton];
+    const buttons = [hotline, zaloButton, facebookButton, chatboxButton, telegramButton];
     buttons.forEach(button => {
         button.style.animation = "blinking 1.5s infinite";
     });
@@ -181,7 +192,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0.8) 70%)", // Red for hotline
         "radial-gradient(circle, rgba(0, 255, 0, 1) 0%, rgba(0, 255, 0, 0.8) 70%)", // Green for Zalo
         "radial-gradient(circle, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 255, 0.8) 70%)", // Blue for Facebook
-        "radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0.8) 70%)" // Orange for Chatbox
+        "radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 165, 0, 0.8) 70%)", // Orange for Chatbox
+        "radial-gradient(circle, rgba(0, 191, 255, 1) 0%, rgba(0, 191, 255, 0.8) 70%)" // Light blue for Telegram
     ];
 
     // Apply unique colors and bouncing animation to each button
@@ -218,11 +230,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const zaloTag = createTag("Liên hệ qua Zalo");
     const facebookTag = createTag("Liên hệ qua Facebook");
     const chatboxTag = createTag("Liên hệ qua Chatbox");
+    const telegramTag = createTag("Liên hệ qua Telegram");
 
     hotline.appendChild(hotlineTag);
     zaloButton.appendChild(zaloTag);
     facebookButton.appendChild(facebookTag);
     chatboxButton.appendChild(chatboxTag);
+    telegramButton.appendChild(telegramTag);
 
     // Function to show and hide tags on hover
     function addHoverEffect(button, tag) {
@@ -242,4 +256,5 @@ document.addEventListener("DOMContentLoaded", function () {
     addHoverEffect(zaloButton, zaloTag);
     addHoverEffect(facebookButton, facebookTag);
     addHoverEffect(chatboxButton, chatboxTag);
+    addHoverEffect(telegramButton, telegramTag);
 });
