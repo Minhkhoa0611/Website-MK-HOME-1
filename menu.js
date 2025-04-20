@@ -126,15 +126,31 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.innerHTML = menuHTML;
     document.body.insertBefore(nav, document.body.firstChild);
 
-    // Add event listener to scroll to the top when "Trang Chủ" is clicked
+    // Update event listener for "Trang Chủ" to navigate to the homepage
     document.getElementById("home-link").addEventListener("click", function (event) {
         event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.location.href = "index.html";
     });
 
-    // Add event listener to scroll to the top when the logo is clicked
+    // Update event listener for the logo to navigate to the homepage
     document.querySelector(".logo a").addEventListener("click", function (event) {
         event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.location.href = "index.html";
+    });
+
+    // Update links with # to navigate to the correct page
+    const menuLinks = document.querySelectorAll('a[href^="#"]');
+    menuLinks.forEach(link => {
+        link.addEventListener("click", (event) => {
+            const targetId = link.getAttribute("href").substring(1);
+            if (targetId) {
+                event.preventDefault();
+                if (window.location.pathname !== "/index.html") {
+                    window.location.href = `index.html#${targetId}`;
+                } else {
+                    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        });
     });
 });

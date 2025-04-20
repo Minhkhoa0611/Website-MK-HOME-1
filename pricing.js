@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const pricingSection = `
         <div id="baogia" class="baogia">
-            <h1>BÁO GIÁ DỊCH VỤ CỦA XAYDUNGMINHKHOA</h1>
+            <h1>BÁO GIÁ DỊCH VỤ TƯ VẤN GIÁM SÁT - THIẾT KẾ THI CÔNG MK HOME</h1>
             <h2>📋 Dịch vụ Giám Sát</h2>
             <table>
                 <tr>

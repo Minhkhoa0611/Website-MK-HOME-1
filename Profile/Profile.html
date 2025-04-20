@@ -5,105 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hồ Sơ Cá Nhân - Trần Minh Khoa</title>
     <link rel="icon" href="MKHomeLogo.png" type="image/png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background: linear-gradient(135deg, #e0f7fa, #80deea); /* Màu nền dịu nhẹ hơn */
-            color: #2c3e50; /* Màu chữ tối hơn để dễ đọc */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container { 
-            max-width: 800px; 
-            background: #ffffff; 
-            padding: 30px; 
-            border-radius: 15px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
-            text-align: center;
-        }
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid #00acc1; /* Màu viền nổi bật hơn */
-            margin-bottom: 15px;
-        }
-        h1 { font-size: 2.2em; margin-bottom: 5px; font-weight: 600; color: #00796b; } /* Màu xanh lá đậm */
-        h2 { font-size: 1.5em; font-weight: 400; margin-bottom: 15px; color: #004d40; } /* Màu xanh lá tối */
-        .info p { margin: 8px 0; }
-        .section { margin-top: 30px; padding-top: 15px; border-top: 1px solid #b2dfdb; } /* Đường viền nhẹ hơn */
-        ul { list-style: none; padding: 0; }
-        ul li { 
-            background: #e0f2f1; /* Màu nền dịu nhẹ */
-            margin: 8px 0; 
-            padding: 12px; 
-            border-radius: 8px; 
-            transition: 0.3s;
-        }
-        ul li:hover { background: #b2dfdb; } /* Màu nền khi hover */
-        a { color: #00796b; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-        .btn {
-            display: inline-block;
-            background: #00796b; /* Màu nút nổi bật */
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 15px;
-            font-size: 1.2em;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #004d40; /* Màu nút khi hover */
-        }
-        .blurred {
-            filter: blur(5px); /* Áp dụng hiệu ứng làm mờ */
-            cursor: pointer;
-        }
-        .blurred:hover {
-            filter: none; /* Hiển thị rõ khi hover */
-        }
-        .skill-bar {
-            display: flex;
-            align-items: center;
-            margin: 8px 0;
-        }
-        .skill-bar span {
-            flex: 1;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        .bar {
-            flex: 3;
-            height: 10px;
-            background: #e0f2f1;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-left: 10px;
-        }
-        .bar div {
-            height: 100%;
-            background: #00796b;
-            border-radius: 5px;
-        }
-        .education-title {
-            font-size: 1.5em; /* Kích thước lớn hơn */
-            font-weight: bold;
-        }
-        .education-subtitle {
-            font-size: 1.2em; /* Kích thước nhỏ hơn tiêu đề */
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="Profile.css">
 </head>
-<body>
+<body style="background: linear-gradient(135deg, #f0f4f8, #d9e8f5); font-family: 'Poppins', sans-serif; margin: 0; padding: 0;">
     <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 1000;"></div>
     <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -111,76 +15,87 @@
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <div class="container">
-        <img src="avatar.jpg" alt="Avatar" class="profile-img">
-        <h1>TRẦN MINH KHOA</h1>
-        <h2>Cử Nhân Ngành Xây Dựng</h2>
-        
-        <div class="info">
-            <p><strong>Ngày sinh:</strong> <span class="blurred">22/06/2002</span></p>
-            <p><strong>Giới tính:</strong> Nam</p>
-            <p><strong>Địa chỉ:</strong> Ninh Hòa, Khánh Hòa</p>
-            <p><strong>Email:</strong> <a href="mailto:khoaminhtran9@gmail.com">khoaminhtran9@gmail.com</a></p>
-            <p><strong>Điện thoại:</strong> 0867544809</p>
-            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/mk.minhkhoa06/" target="_blank">mk.minhkhoa06</a></p>
+    
+    <!-- Profile Content -->
+    <div class="container" style="max-width: 900px; margin: 2rem auto; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 2rem;">
+        <div style="text-align: center;">
+            <img src="avatar.jpg" alt="Avatar" class="profile-img" style="width: 150px; height: 150px; border-radius: 50%; border: 5px solid #00796b; margin-bottom: 1rem;">
+            <h1 style="font-size: 2.5rem; color: #00796b; margin-bottom: 0.5rem;">TRẦN MINH KHOA</h1>
+            <h2 style="font-size: 1.5rem; color: #004d40; margin-bottom: 1rem;">Cử Nhân Ngành Xây Dựng</h2>
         </div>
         
-        <div class="section">
-            <h2>COMPANY</h2>
-            <p class="education-title">MK HOME DESIGN & CONSTRUCTION</p>
-            <p style="font-style: italic; color: #00796b; font-weight: bold;">NÂNG TẦM KHÔNG GIAN SỐNG</p> <!-- Thêm in đậm -->
-            <img src="MKHomeLogo.png" alt="MK Home Logo" style="width: 100px; margin: 15px 0;">
-            <p class="education-subtitle">SENIOR MANAGEMENT</p>
-            <ul>
-                <li>Điều hành quản lý tổ chức công ty</li>
-                <li>Thiết Kế - Giám Sát - Thi Công</li>
+        <div class="info" style="margin-bottom: 2rem;">
+            <p><strong>Ngày sinh:</strong> 22/06/2002</p>
+            <p><strong>Giới tính:</strong> Nam</p>
+            <p><strong>Địa chỉ:</strong> Ninh Hòa, Khánh Hòa</p>
+            <p><strong>Email:</strong> <a href="mailto:khoaminhtran9@gmail.com" style="color: #00796b;">khoaminhtran9@gmail.com</a></p>
+            <p><strong>Điện thoại:</strong> 0867544809</p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/mk.minhkhoa06/" target="_blank" style="color: #00796b;">mk.minhkhoa06</a></p>
+        </div>
+        
+        <div class="section" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 2rem; color: #00796b; margin-bottom: 1rem;">COMPANY</h2>
+            <p style="font-size: 1.5rem; font-weight: bold; color: #004d40;">MK HOME DESIGN & CONSTRUCTION</p>
+            <p style="font-style: italic; color: #00796b; font-weight: bold;">NÂNG TẦM KHÔNG GIAN SỐNG</p>
+            <img src="MKHomeLogo.png" alt="MK Home Logo" style="width: 120px; margin: 1rem 0;">
+            <ul style="list-style: none; padding: 0;">
+                <li style="background: #e0f2f1; padding: 10px; border-radius: 8px; margin-bottom: 0.5rem;">Điều hành quản lý tổ chức công ty</li>
+                <li style="background: #e0f2f1; padding: 10px; border-radius: 8px;">Thiết Kế - Giám Sát - Thi Công</li>
             </ul>
         </div>
         
-        <div class="section">
-            <h2>HỌC VẤN</h2>
-            <img src="NTU.png" alt="Logo Trường Đại học Nha Trang" style="width: 250px; margin: 15px 0;"> <!-- Di chuyển logo về vị trí cũ -->
-            <p class="education-title">TRƯỜNG ĐẠI HỌC NHA TRANG</p>
-            <p class="education-subtitle">KỸ THUẬT XÂY DỰNG</p>
+        <div class="section" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 2rem; color: #00796b; margin-bottom: 1rem;">HỌC VẤN</h2>
+            <img src="NTU.png" alt="Logo Trường Đại học Nha Trang" style="width: 200px; margin: 1rem 0;">
+            <p style="font-size: 1.5rem; font-weight: bold; color: #004d40;">TRƯỜNG ĐẠI HỌC NHA TRANG</p>
+            <p style="font-size: 1.2rem; font-weight: bold; color: #00796b;">KỸ THUẬT XÂY DỰNG</p>
+        </div>
+        
+        <div class="section" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 2rem; color: #00796b; margin-bottom: 1rem;">MỤC TIÊU NGHỀ NGHIỆP</h2>
+            <p style="line-height: 1.6;">Phấn đấu trở thành một nhà điều hành xuất sắc trong lĩnh vực xây dựng, quản lý dự án hiệu quả và đưa ra các chiến lược phát triển bền vững. Mong muốn lãnh đạo đội ngũ kỹ thuật, tối ưu hóa quy trình thi công và đóng góp vào sự thành công lâu dài của doanh nghiệp.</p>
+        </div>
+        
+        <div class="section" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 2rem; color: #00796b; margin-bottom: 1rem;">KỸ NĂNG</h2>
+            <div class="skill-bar" style="margin-bottom: 0.5rem;">
+                <span style="flex: 1; font-weight: bold;">AutoCad</span>
+                <div class="bar" style="flex: 3; height: 10px; background: #e0f2f1; border-radius: 5px; overflow: hidden;">
+                    <div style="width: 90%; height: 100%; background: #00796b;"></div>
+                </div>
+            </div>
+            <div class="skill-bar" style="margin-bottom: 0.5rem;">
+                <span style="flex: 1; font-weight: bold;">SketchUp</span>
+                <div class="bar" style="flex: 3; height: 10px; background: #e0f2f1; border-radius: 5px; overflow: hidden;">
+                    <div style="width: 50%; height: 100%; background: #00796b;"></div>
+                </div>
+            </div>
+            <div class="skill-bar" style="margin-bottom: 0.5rem;">
+                <span style="flex: 1; font-weight: bold;">Etabs, Safe, Sap</span>
+                <div class="bar" style="flex: 3; height: 10px; background: #e0f2f1; border-radius: 5px; overflow: hidden;">
+                    <div style="width: 50%; height: 100%; background: #00796b;"></div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span style="flex: 1; font-weight: bold;">Tin học văn phòng</span>
+                <div class="bar" style="flex: 3; height: 10px; background: #e0f2f1; border-radius: 5px; overflow: hidden;">
+                    <div style="width: 90%; height: 100%; background: #00796b;"></div>
+                </div>
+            </div>
         </div>
         
         <div class="section">
-            <h2>MỤC TIÊU NGHỀ NGHIỆP</h2>
-            <p>Phấn đấu trở thành một nhà điều hành xuất sắc trong lĩnh vực xây dựng, quản lý dự án hiệu quả và đưa ra các chiến lược phát triển bền vững. Mong muốn lãnh đạo đội ngũ kỹ thuật, tối ưu hóa quy trình thi công và đóng góp vào sự thành công lâu dài của doanh nghiệp.</p>
-        </div>
-        
-        <div class="section">
-            <h2>KỸ NĂNG</h2>
-            <div class="skill-bar">
-                <span>AutoCad</span>
-                <div class="bar"><div style="width: 90%;"></div></div> <!-- Thành thạo -->
-            </div>
-            <div class="skill-bar">
-                <span>SketchUp</span>
-                <div class="bar"><div style="width: 50%;"></div></div> <!-- Cơ bản -->
-            </div>
-            <div class="skill-bar">
-                <span>Etabs, Safe, Sap</span>
-                <div class="bar"><div style="width: 50%;"></div></div> <!-- Cơ bản -->
-            </div>
-            <div class="skill-bar">
-                <span>Tin học văn phòng</span>
-                <div class="bar"><div style="width: 90%;"></div></div> <!-- Thành thạo -->
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>SỞ THÍCH</h2>
-            <ul>
-                <li>
-                    Nghiên cứu
+            <h2 style="font-size: 2rem; color: #00796b; margin-bottom: 1rem;">SỞ THÍCH</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="background: #e0f2f1; padding: 10px; border-radius: 8px; margin-bottom: 0.5rem;">Nghiên cứu</li>
+                <li style="background: #e0f2f1; padding: 10px; border-radius: 8px; margin-bottom: 0.5rem;">
                     <ul>
                         <li>+ Khám phá và phát triển các hệ thống quản lý hiệu quả trong ngành xây dựng</li>
                         <li>+ Tìm kiếm và ứng dụng vật liệu xây dựng nhẹ, bền và thân thiện với môi trường</li>
                     </ul>
                 </li>
-                <li>Nghe nhạc</li>
-                <li>Xem phim</li>
+                <li style="background: #e0f2f1; padding: 10px; border-radius: 8px; margin-bottom: 0.5rem;">Nghe nhạc</li>
+                <li style="background: #e0f2f1; padding: 10px; border-radius: 8px;">Xem phim</li>
             </ul>
         </div>
     </div>
