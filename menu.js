@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="#baogia"><i class="fas fa-file-invoice-dollar"></i> Báo Giá</a></li>
             <li><a href="Profile/Profile.html" target="_blank"><i class="fas fa-user"></i> Profile</a></li>
             <li><a href="#contact-form"><i class="fas fa-envelope"></i> Liên Hệ</a></li>
+            <li><a href="#fb-comments"><i class="fas fa-comment-dots"></i> Góp Ý</a></li>
         </ul>
     `;
 
@@ -153,4 +154,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Add ID to Facebook comments container if it exists
+    const fbCommentsContainer = document.querySelector(".fb-comments-container");
+    if (fbCommentsContainer) {
+        fbCommentsContainer.id = "fb-comments";
+    }
 });
