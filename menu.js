@@ -146,10 +146,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetId = link.getAttribute("href").substring(1);
             if (targetId) {
                 event.preventDefault();
-                if (window.location.pathname !== "/index.html") {
-                    window.location.href = `index.html#${targetId}`;
+                if (targetId === "fb-comments") {
+                    const fbCommentsContainer = document.querySelector(".fb-comments-container");
+                    if (fbCommentsContainer) {
+                        fbCommentsContainer.scrollIntoView({ behavior: "smooth" });
+                    }
                 } else {
-                    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: "smooth" });
+                    }
                 }
             }
         });
