@@ -41,6 +41,7 @@
     <script src="footer.js" defer></script> 
     <script src="floating-contact.js" defer></script> 
     <script src="adblock-detection.js" defer></script>
+    <script src="facebook-comments.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -84,26 +85,4 @@
         </div>
     </section>
 </body>
-
-<!-- Facebook Comments Section -->
-<div id="fb-root"></div>
-<div class="fb-comments-container" style="margin: 50px auto; max-width: 1200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); background-color: #f9f9f9;">
-    <h3 style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px; text-align: center;">Ý Kiến Khách Hàng</h3>
-    <div class="fb-comments" 
-         data-href="https://www.xaydungminhkhoa.online" 
-         data-width="100%" 
-         data-numposts="5">
-    </div>
-</div>
-
-<script>
-  // Tải Facebook SDK
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
 </html>
