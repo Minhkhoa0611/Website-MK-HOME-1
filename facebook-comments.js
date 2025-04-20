@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const fbCommentsHTML = `
             <div id="fb-root"></div>
             <div class="fb-comments-container" style="margin: 50px auto; max-width: 1000px; padding: 30px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); background-color: #ffffff; border: 1px solid #e0e0e0;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="Logo.png" alt="MK Logo" style="height: 80px; width: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                </div>
                 <h3 style="font-size: 24px; font-weight: bold; color: #0055ff; margin-bottom: 20px; text-align: center; text-shadow: 1px 1px 3px rgba(0, 85, 255, 0.3);">
                     Ý Kiến Khách Hàng
                 </h3>
