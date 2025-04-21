@@ -14,22 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 10px; /* Giảm khoảng cách giữa các mục */
             list-style: none;
-            padding: 15px 30px;
+            padding: 10px 20px; /* Giảm padding */
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             background: #f5f5dc; /* Màu nền be */
             z-index: 1000;
-            height: 120px;
+            height: 100px; /* Giảm chiều cao */
             transition: all 0.3s ease;
             box-shadow: none; /* Loại bỏ bóng xanh */
         }
 
         body {
-            padding-top: 120px;
+            padding-top: 100px; /* Điều chỉnh padding-top để phù hợp với chiều cao menu */
         }
 
         .menu li {
@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
         .menu a {
             text-decoration: none;
             color: #333; /* Màu chữ tối */
-            font-size: 18px;
+            font-size: 16px; /* Giảm kích thước font chữ */
             font-weight: bold;
-            padding: 10px 20px;
+            padding: 8px 15px; /* Giảm padding */
             display: flex;
             align-items: center;
             gap: 8px; /* Khoảng cách giữa biểu tượng và chữ */
@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="Profile/Profile.html" target="_blank" id="profile-link"><i class="fas fa-user"></i> Profile</a></li>
             <li><a href="#contact-form"><i class="fas fa-envelope"></i> Liên Hệ</a></li>
             <li><a href="#fb-comments"><i class="fas fa-comment-dots"></i> Góp Ý</a></li>
+            <li><a href="#" id="thanhtoan-link"><i class="fas fa-credit-card"></i> Thanh Toán</a></li>
         </ul>
     `;
 
@@ -195,6 +196,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const popup = window.open(
             "Profile/Profile.html",
             "profilePopup",
+            `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
+        );
+        if (!popup) {
+            alert("Popup bị chặn! Vui lòng cho phép popup trong trình duyệt.");
+        }
+    });
+
+    // Add event listener for "Thanh Toán" to open a styled popup window
+    document.getElementById("thanhtoan-link").addEventListener("click", function (event) {
+        event.preventDefault();
+        const width = 500; // Chiều rộng
+        const height = 650; // Chiều cao
+        const left = (window.screen.width - width) / 2;
+        const top = (window.screen.height - height) / 2;
+        const popup = window.open(
+            "PhanMem/thanhtoan/thanhtoan.html",
+            "thanhtoanPopup",
             `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
         );
         if (!popup) {
