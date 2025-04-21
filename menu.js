@@ -105,13 +105,14 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="#" id="home-link"><i class="fas fa-home"></i> Trang Chủ</a></li>
             <li><a href="dichvu.html" target="_blank"><i class="fas fa-tools"></i> Dịch Vụ</a></li>
             <li><a href="phanmem.html" target="_blank"><i class="fas fa-laptop-code"></i> Phần Mềm</a></li>
+            <li><a href="#" id="dutoan-link"><i class="fas fa-calculator"></i> Dự Toán Nhanh</a></li>
             <li class="logo">
                 <a href="index.html">
                     <img src="Logo.png" alt="MK DESIGN">
                 </a>
             </li>
             <li><a href="#baogia"><i class="fas fa-file-invoice-dollar"></i> Báo Giá</a></li>
-            <li><a href="Profile/Profile.html" target="_blank"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="Profile/Profile.html" target="_blank" id="profile-link"><i class="fas fa-user"></i> Profile</a></li>
             <li><a href="#contact-form"><i class="fas fa-envelope"></i> Liên Hệ</a></li>
             <li><a href="#fb-comments"><i class="fas fa-comment-dots"></i> Góp Ý</a></li>
         </ul>
@@ -166,4 +167,38 @@ document.addEventListener("DOMContentLoaded", function () {
     if (fbCommentsContainer) {
         fbCommentsContainer.id = "fb-comments";
     }
+
+    // Add event listener for "Dư Toán Nhanh" to open a styled popup window
+    document.getElementById("dutoan-link").addEventListener("click", function (event) {
+        event.preventDefault();
+        const width = 1000;
+        const height = 700;
+        const left = (window.screen.width - width) / 2;
+        const top = (window.screen.height - height) / 2;
+        const popup = window.open(
+            "PhanMem/Dutoanxaydung/Dự toán xây Dựng.html",
+            "popupWindow",
+            `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
+        );
+        if (!popup) {
+            alert("Popup bị chặn! Vui lòng cho phép popup trong trình duyệt.");
+        }
+    });
+
+    // Add event listener for "Profile" to open a styled popup window
+    document.getElementById("profile-link").addEventListener("click", function (event) {
+        event.preventDefault();
+        const width = 1000;
+        const height = 700;
+        const left = (window.screen.width - width) / 2;
+        const top = (window.screen.height - height) / 2;
+        const popup = window.open(
+            "Profile/Profile.html",
+            "profilePopup",
+            `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
+        );
+        if (!popup) {
+            alert("Popup bị chặn! Vui lòng cho phép popup trong trình duyệt.");
+        }
+    });
 });

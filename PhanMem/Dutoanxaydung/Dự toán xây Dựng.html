@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự Toán Nhanh Chi Phí Xây Dựng Nhà</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @media print {
+            #estimateForm, #calculateBtn {
+                display: none; /* Ẩn phần nhập khi in */
+            }
+            #exportBtn {
+                display: none; /* Ẩn nút Xuất Kết Quả khi in */
+            }
+            h1, #result h2 {
+                display: none; /* Ẩn tiêu đề cũ */
+            }
+            #printTitle {
+                display: block; /* Hiển thị tiêu đề mới */
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        }
+        #printTitle {
+            display: none; /* Ẩn tiêu đề mới khi không in */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -23,6 +46,7 @@
             <select id="roof" required>
                 <option value="30">Mái Ngói (30%)</option>
                 <option value="50">Mái Bê Tông (50%)</option>
+                <option value="15">Mái Tôn (15%)</option> <!-- Added Mái Tôn -->
             </select>
 
             <label for="foundation">Loại móng:</label>
@@ -36,6 +60,8 @@
         </form>
         <div id="result">
             <h2>Kết Quả</h2>
+            <h3 style="text-align: center; margin-top: 20px;">BẢNG BẢO GIÁ CHI PHÍ XÂY DỰNG NHÀ</h3> <!-- Added title -->
+            <p style="text-align: center; font-style: italic; color: gray;">(Không bao gồm nội thất rời)</p> <!-- Updated note -->
             <div id="floorAreas"></div>
             <div id="totalArea"></div>
             <div id="adjustedArea"></div> <!-- Added for area with percentage -->
@@ -43,6 +69,9 @@
             <div id="materialEstimates"></div>
         </div>
     </div>
+    <div id="printTitle">BẢNG BẢO GIÁ CHI PHÍ XÂY DỰNG NHÀ</div> <!-- Tiêu đề mới -->
+    <button type="button" id="exportBtn" style="display: none; margin-top: 20px;">Xuất Kết Quả</button> <!-- Moved to the end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> <!-- Added jsPDF -->
     <script src="script.js"></script>
 </body>
 </html>

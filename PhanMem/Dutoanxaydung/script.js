@@ -53,6 +53,8 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
     }
 
     const resultTable = `
+        <h3 style="text-align: center; margin-top: 20px;">BẢNG BẢO GIÁ CHI PHÍ XÂY DỰNG NHÀ</h3> <!-- Added title -->
+        <p style="text-align: center; font-style: italic; color: gray;">(Không bao gồm nội thất rời)</p> <!-- Added note -->
         <table border="1" style="width: 100%; border-collapse: collapse;">
             <thead>
                 <tr>
@@ -232,4 +234,11 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
         <h3>Tiến Độ Dự Đoán</h3>
         ${progressTable}
     `;
+
+    // Hiển thị nút "Xuất Kết Quả" sau khi tính toán
+    document.getElementById('exportBtn').style.display = 'block';
+});
+
+document.getElementById('exportBtn').addEventListener('click', () => {
+    window.print(); // Sử dụng trình in của trình duyệt
 });
