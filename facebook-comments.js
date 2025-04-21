@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (contactInfoSection && footerSection) {
         const fbCommentsHTML = `
             <div id="fb-root"></div>
-            <div class="fb-comments-container" style="margin: 50px auto; max-width: 1000px; padding: 30px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); background-color: #ffffff; border: 1px solid #e0e0e0;">
+            <div class="fb-comments-container" style="margin: 50px auto; max-width: 100%; padding: 30px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); background-color: #ffffff; border: 1px solid #e0e0e0;">
                 <div style="text-align: center; margin-bottom: 20px;">
                     <img src="Logo.png" alt="MK Logo" style="height: 80px; width: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 </div>
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                      data-href="https://www.xaydungminhkhoa.online" 
                      data-width="100%" 
                      data-numposts="5" 
-                     style="border-top: 1px solid #e0e0e0; padding-top: 20px;">
+                     style="border-top: 1px solid #e0e0e0; padding-top: 20px; overflow-x: hidden;">
                 </div>
             </div>
         `;

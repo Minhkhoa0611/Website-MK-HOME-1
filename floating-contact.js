@@ -124,21 +124,46 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!iframe) {
             iframe = document.createElement("iframe");
             iframe.id = "chatbox-iframe";
-            iframe.src = "ChatBox/Chatbox.html";
+            iframe.src = "ChatBox/Chatbox.html"; // Embed the full Chatbox page
             iframe.style.cssText = `
-                width: 100%;
-                height: 100vh;
+                width: 470px;
+                height: 670px;
                 border: none;
                 position: fixed;
-                bottom: 0;
-                right: 0;
+                bottom: 20px;
+                right: calc(20px + 4cm);
                 z-index: 1000;
+                border-radius: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 4px;
+                background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+                background-size: 300% 300%;
+                animation: neonBorder 6s linear infinite;
             `;
+
+            // Ensure the CSS animation is added only once
+            if (!document.getElementById("neon-border-style")) {
+                const style = document.createElement('style');
+                style.id = "neon-border-style";
+                style.textContent = `
+                    @keyframes neonBorder {
+                        0% { background-position: 0% 50%; }
+                        50% { background-position: 100% 50%; }
+                        100% { background-position: 0% 50%; }
+                    }
+
+                    iframe {
+                        box-sizing: border-box;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(iframe); // Append the iframe to the body
         } else {
+            // Toggle visibility of the iframe
             iframe.style.display = iframe.style.display === "none" ? "block" : "none";
         }
-
-        document.body.appendChild(iframe);
     });
 
     container.appendChild(chatboxButton);
